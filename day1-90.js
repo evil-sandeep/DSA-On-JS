@@ -11,8 +11,25 @@ var removeDuplicates = function (nums) {
     return i+1
 };
 
-let nums=[0,0,1,1,1,2,2,2,3,4,5,5,5,6]
-let k=removeDuplicates(nums)
-console.log(k)
-console.log(nums.slice(0,k))
+// let nums=[0,0,1,1,1,2,2,2,3,4,5,5,5,6]
+// let k=removeDuplicates(nums)
+// console.log(k)
+// console.log(nums.slice(0,k))
 
+//remove element from an array
+
+var removeElement=function(nums,val){ //nums=[3,2,2,3], val =3
+    let i=0; 
+    for(let j=0;j<nums.length;j++){
+        if(nums[j]!==val){         //0->3=3-skip,1->2=/=3,2->2=/=3,3->3=3-skip
+            nums[i]=nums[j]       // interchange->3=2, [2,2,2,3] ,2=2,[2,2,2,3]
+            i++                    //0 ,incr-1, incr - 2
+        }
+    }
+    return i                        // indices return
+}
+
+let nums=[3,2,2,3] ,val =3
+ let k=removeElement(nums,val)
+ console.log(k)
+ console.log(nums.slice(0,k))
