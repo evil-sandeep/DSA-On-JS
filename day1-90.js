@@ -55,15 +55,33 @@ var removeDuplicates = function (nums) {
 // console.log(reverseString(["h","e","l","l","o"]))
 
 // 4-->leetcode->121->Best time to buy and sell stock 
-let maxProfit = (prices) => {
-    let min = prices[0];
-    let max = 0;
-    for (let i = 0; i < prices.length; i++) {
-        min = Math.min(min, prices[i]);
-        const profit = prices[i] - min
-        max = Math.max(profit, max)
+// let maxProfit = (prices) => {
+//     let min = prices[0];
+//     let max = 0;
+//     for (let i = 0; i < prices.length; i++) {
+//         min = Math.min(min, prices[i]);
+//         const profit = prices[i] - min
+//         max = Math.max(profit, max)
+//     }
+//     return max
+// }
+
+// console.log(maxProfit([7,1,5,3,7,2]))
+
+let maxProfit=(prices)=>{
+    let min=prices[0];
+    let max=0;
+    for(let i=1;i<prices.length; i++){
+        let p=prices[i]
+        if(p<min){
+            min=p
+        }else{
+            let profit=prices[i]-min
+            if(profit>max){
+                max=profit
+            }
+        }
     }
     return max
 }
-
-console.log(maxProfit([7,1,5,3,7,2]))
+console.log(maxProfit([7,11,5,30,10,55]))
