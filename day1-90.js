@@ -36,8 +36,20 @@ var removeDuplicates = function (nums) {
 
 
 //  3-Reverse Strings
+// var reverseString = function(s) {
+//     return s.reverse()
+// };
+
+// console.log(reverseString(["h","e","l","l","o"]))
 var reverseString = function(s) {
-    return s.reverse()
+    let left=0
+    for(let right=s.length-1;left<right;right--){//right=4,0<4->true, right=3,1<3 , right=2,2<2
+       let temp=s[right]                             //temp=s[4]='o',temp=s[3]='l' 
+       s[right]=s[left]                              //s[4]=s[0]='h',s[3]=s[1]='e'
+       s[left]=temp                                 //s[0]='o'      ,s[1]='l'     
+       left ++                                      //left 0->1     ,left 1->2    
+    }
+    return s
 };
 
 console.log(reverseString(["h","e","l","l","o"]))
