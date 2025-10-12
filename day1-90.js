@@ -18,18 +18,26 @@ var removeDuplicates = function (nums) {
 
 //remove element from an array
 
-var removeElement=function(nums,val){ //nums=[3,2,2,3], val =3
-    let i=0; 
-    for(let j=0;j<nums.length;j++){
-        if(nums[j]!==val){         //0->3=3-skip,1->2=/=3,2->2=/=3,3->3=3-skip
-            nums[i]=nums[j]       // interchange->3=2, [2,2,2,3] ,2=2,[2,2,2,3]
-            i++                    //0 ,incr-1, incr - 2
-        }
-    }
-    return i                        // indices return
-}
+// var removeElement=function(nums,val){ //nums=[3,2,2,3], val =3
+//     let i=0; 
+//     for(let j=0;j<nums.length;j++){
+//         if(nums[j]!==val){         //0->3=3-skip,1->2=/=3,2->2=/=3,3->3=3-skip
+//             nums[i]=nums[j]       // interchange->3=2, [2,2,2,3] ,2=2,[2,2,2,3]
+//             i++                    //0 ,incr-1, incr - 2
+//         }
+//     }
+//     return i                        // indices return
+// }
 
-let nums=[3,2,2,3] ,val =3
- let k=removeElement(nums,val)
- console.log(k)
- console.log(nums.slice(0,k))
+// let nums=[3,2,2,3] ,val =3
+//  let k=removeElement(nums,val)
+//  console.log(k)
+//  console.log(nums.slice(0,k))
+
+
+//  3-Reverse Strings
+var reverseString = function(s) {
+    return s.reverse()
+};
+
+console.log(reverseString(["h","e","l","l","o"]))
