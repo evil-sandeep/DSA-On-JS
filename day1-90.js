@@ -68,20 +68,45 @@ var removeDuplicates = function (nums) {
 
 // console.log(maxProfit([7,1,5,3,7,2]))
 
-let maxProfit=(prices)=>{
-    let min=prices[0];
-    let max=0;
-    for(let i=1;i<prices.length; i++){
-        let p=prices[i]
-        if(p<min){
-            min=p
-        }else{
-            let profit=prices[i]-min
-            if(profit>max){
-                max=profit
+let maxProfit = (prices) => {
+    let min = prices[0];
+    let max = 0;
+    for (let i = 1; i < prices.length; i++) {
+        let p = prices[i]
+        if (p < min) {
+            min = p
+        } else {
+            let profit = prices[i] - min
+            if (profit > max) {
+                max = profit
             }
         }
     }
     return max
 }
-console.log(maxProfit([7,11,5,30,10,55]))
+// console.log(maxProfit([7, 11, 5, 30, 10, 55]))
+
+//merge sorted array leetcode 88
+
+let merge = (nums1, m, nums2, n) => {
+    let first = m - 1;
+    let second = n - 1;
+    let i = m+n-1;
+    while (second >= 0) {
+        let fVal = nums1[first]
+        let sVal = nums2[second]
+
+        if (fVal > sVal) {
+            nums1[i] = fVal
+            i--
+            first--
+        } else {
+            nums1[i] = sVal
+            i--
+            second--
+        }
+    }
+}
+let nums1 = [1, 2, 3, 0, 0, 0], m = 3, nums2 = [2, 5, 6], n = 3
+merge(nums1, m, nums2, n);
+console.log(nums1)
