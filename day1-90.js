@@ -109,4 +109,24 @@ let merge = (nums1, m, nums2, n) => {
 }
 let nums1 = [1, 2, 3, 0, 0, 0], m = 3, nums2 = [2, 5, 6], n = 3
 merge(nums1, m, nums2, n);
-console.log(nums1)
+// console.log(nums1)
+
+
+//Day 5- leetcode Moves Zeores
+
+let movesZeros=(nums)=>{
+    let first=0;
+    for(let i=0; i<nums.length; i++){
+        if(nums[i]!=0){
+            nums[first]=nums[i]
+            first++
+        }
+    }
+    while(first<nums.length){
+         nums[first++]=0
+    }
+    return nums;
+}
+
+let k=[0,2,1,0,4,0,13]
+console.log(movesZeros(k))
