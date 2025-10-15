@@ -88,45 +88,63 @@ let maxProfit = (prices) => {
 
 //merge sorted array leetcode 88
 
-let merge = (nums1, m, nums2, n) => {
-    let first = m - 1;
-    let second = n - 1;
-    let i = m+n-1;
-    while (second >= 0) {
-        let fVal = nums1[first]
-        let sVal = nums2[second]
+// let merge = (nums1, m, nums2, n) => {
+//     let first = m - 1;
+//     let second = n - 1;
+//     let i = m+n-1;
+//     while (second >= 0) {
+//         let fVal = nums1[first]
+//         let sVal = nums2[second]
 
-        if (fVal > sVal) {
-            nums1[i] = fVal
-            i--
-            first--
-        } else {
-            nums1[i] = sVal
-            i--
-            second--
-        }
-    }
-}
-let nums1 = [1, 2, 3, 0, 0, 0], m = 3, nums2 = [2, 5, 6], n = 3
-merge(nums1, m, nums2, n);
+//         if (fVal > sVal) {
+//             nums1[i] = fVal
+//             i--
+//             first--
+//         } else {
+//             nums1[i] = sVal
+//             i--
+//             second--
+//         }
+//     }
+// }
+// let nums1 = [1, 2, 3, 0, 0, 0], m = 3, nums2 = [2, 5, 6], n = 3
+// merge(nums1, m, nums2, n);
 // console.log(nums1)
 
 
 //Day 5- leetcode Moves Zeores
 
-let movesZeros=(nums)=>{
-    let first=0;
+// let movesZeros=(nums)=>{
+//     let first=0;
+//     for(let i=0; i<nums.length; i++){
+//         if(nums[i]!=0){
+//             nums[first]=nums[i]
+//             first++
+//         }
+//     }
+//     while(first<nums.length){
+//          nums[first++]=0
+//     }
+//     return nums;
+// }
+
+// let k=[0,2,1,0,4,0,13]
+// console.log(movesZeros(k))
+
+//Day 6 Leetcode 485-Max Consecutive Ones
+
+let maxNo=(nums)=>{
+    let trackOne=0
+    let best=0;
     for(let i=0; i<nums.length; i++){
         if(nums[i]!=0){
-            nums[first]=nums[i]
-            first++
+            trackOne++;
+            best=Math.max(best,trackOne)
+        }else{
+            trackOne=0
         }
     }
-    while(first<nums.length){
-         nums[first++]=0
-    }
-    return nums;
+    return best
 }
 
-let k=[0,2,1,0,4,0,13]
-console.log(movesZeros(k))
+console.log(maxNo([1,1,0,1,0,1,1,1,1,0,1,1,1,1,1,1,1,1,1,1,1,1,0,1]))
