@@ -133,18 +133,37 @@ let maxProfit = (prices) => {
 
 //Day 6 Leetcode 485-Max Consecutive Ones
 
-let maxNo=(nums)=>{
-    let trackOne=0
-    let best=0;
-    for(let i=0; i<nums.length; i++){
-        if(nums[i]!=0){
-            trackOne++;
-            best=Math.max(best,trackOne)
-        }else{
-            trackOne=0
+// let maxNo=(nums)=>{
+//     let trackOne=0
+//     let best=0;
+//     for(let i=0; i<nums.length; i++){
+//         if(nums[i]!=0){
+//             trackOne++;
+//             best=Math.max(best,trackOne)
+//         }else{
+//             trackOne=0
+//         }
+//     }
+//     return best
+// }
+
+// console.log(maxNo([1,1,0,1,0,1,1,1,1,0,1,1,1,1,1,1,1,1,1,1,1,1,0,1]))
+
+// if arr has -ve no , or 0 skip this and sum +ve integer , [1,1,2,3,0,3,4,2,4,-1,4,3,1,0,3,4,-4]=15 
+
+
+let maxSum = (nums) => {
+    let postive = 0;
+    let sum = 0;
+    for (let i = 0; i < nums.length; i++) {
+        if (nums[i] > 0) {
+            postive += nums[i]
+            sum = Math.max(sum, postive)
+        } else {
+            postive = 0
         }
     }
-    return best
+    return sum
 }
 
-console.log(maxNo([1,1,0,1,0,1,1,1,1,0,1,1,1,1,1,1,1,1,1,1,1,1,0,1]))
+console.log(maxSum([1, 1, 2, 3, 0, 3, 4, 3, 4, -1, 4, 3, 1, 0, 3, 4, -4]))
