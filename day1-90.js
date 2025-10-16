@@ -166,4 +166,22 @@ let maxSum = (nums) => {
     return sum
 }
 
-console.log(maxSum([1, 1, 2, 3, 0, 3, 4, 3, 4, -1, 4, 3, 1, 0, 3, 4, -4]))
+// console.log(maxSum([1, 1, 2, 3, 0, 3, 4, 3, 4, -1, 4, 3, 1, 0, 3, 4, -4]))
+
+
+//day -7 -missing numbers
+
+let missingNo=(nums)=>{
+let sortNums=nums.sort((a,b)=>a-b)
+
+if(sortNums[0]!==0) return 0;
+
+for(let i=0;i<sortNums.length;i++){
+    if(sortNums[i+1]-sortNums[i] ===2){
+        return sortNums[i]+1
+    }
+}
+return sortNums[sortNums.length]+1
+}
+
+console.log(missingNo([3,0,1,4,2,6]))
