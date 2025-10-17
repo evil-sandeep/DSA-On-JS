@@ -173,6 +173,7 @@ let maxSum = (nums) => {
 
 let missingNo=(nums)=>{
 let sortNums=nums.sort((a,b)=>a-b)
+console.log(sortNums)
 
 if(sortNums[0]!==0) return 0;
 
@@ -184,4 +185,18 @@ for(let i=0;i<sortNums.length;i++){
 return sortNums[sortNums.length]+1
 }
 
-console.log(missingNo([3,0,1,4,2,6]))
+// console.log(missingNo([0,1,2,8,4,6,7,5,9,10]))
+
+
+//find single no 
+
+let singleNO=(nums)=>{
+    let single=[0]
+
+    for(let i=0; i<nums.length; i++){
+        single=single^nums[i]
+    }
+    return single
+}
+
+console.log(singleNO([1,2,2,3,3,4,1]))
