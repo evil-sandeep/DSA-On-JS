@@ -171,18 +171,18 @@ let maxSum = (nums) => {
 
 //day -7 -missing numbers
 
-let missingNo=(nums)=>{
-let sortNums=nums.sort((a,b)=>a-b)
-console.log(sortNums)
+let missingNo = (nums) => {
+    let sortNums = nums.sort((a, b) => a - b)
+    console.log(sortNums)
 
-if(sortNums[0]!==0) return 0;
+    if (sortNums[0] !== 0) return 0;
 
-for(let i=0;i<sortNums.length;i++){
-    if(sortNums[i+1]-sortNums[i] ===2){
-        return sortNums[i]+1
+    for (let i = 0; i < sortNums.length; i++) {
+        if (sortNums[i + 1] - sortNums[i] === 2) {
+            return sortNums[i] + 1
+        }
     }
-}
-return sortNums[sortNums.length]+1
+    return sortNums[sortNums.length] + 1
 }
 
 // console.log(missingNo([0,1,2,8,4,6,7,5,9,10]))
@@ -190,13 +190,42 @@ return sortNums[sortNums.length]+1
 
 //find single no 
 
-let singleNO=(nums)=>{
-    let single=[0]
+let singleNO = (nums) => {
+    let single = [0]
 
-    for(let i=0; i<nums.length; i++){
-        single=single^nums[i]
+    for (let i = 0; i < nums.length; i++) {
+        single = single ^ nums[i]
     }
     return single
 }
 
-console.log(singleNO([1,2,2,3,3,4,1]))
+// console.log(singleNO([1,2,2,3,3,4,1]))
+
+
+//recursion.
+//21 merged two sorted lists (recursion)
+
+class ListNode {
+  constructor(val, next = null) {
+    this.val = val;
+    this.next = next;
+  }
+}
+
+
+let mergedTwoLists = (list1, list2) => {
+    if (list1 === null) return list2;
+    if (list2 === null) return list1;
+
+    if (list1.val < list2.val) {
+        list1.next = mergedTwoLists(list1.next, list2);
+        return list1;
+    } else {
+        list2.next = mergedTwoLists(list1, list2.next);
+        return list2;
+    }
+};
+
+list1 = [1, 2, 4]
+list2 = [1, 3, 4, 6]
+console.log(mergedTwoLists(list1, list2));
