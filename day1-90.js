@@ -229,3 +229,18 @@ let mergedTwoLists = (list1, list2) => {
 list1 = [1, 2, 4]
 list2 = [1, 3, 4, 6]
 console.log(mergedTwoLists(list1, list2));
+
+
+//removed list from element
+let removedElement=(head,val)=>{
+    if(head === null )return null;
+
+    head.next=removedElement(head.next,val);
+
+    if(head.val===val){
+        return head.next
+
+    }else{
+        return head;
+    }
+}
