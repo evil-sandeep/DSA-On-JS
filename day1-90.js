@@ -206,10 +206,10 @@ let singleNO = (nums) => {
 //21 merged two sorted lists (recursion)
 
 class ListNode {
-  constructor(val, next = null) {
-    this.val = val;
-    this.next = next;
-  }
+    constructor(val, next = null) {
+        this.val = val;
+        this.next = next;
+    }
 }
 
 
@@ -232,15 +232,31 @@ console.log(mergedTwoLists(list1, list2));
 
 
 //removed list from element
-let removedElement=(head,val)=>{
-    if(head === null )return null;
+let removedElement = (head, val) => {
+    if (head === null) return null;
 
-    head.next=removedElement(head.next,val);
+    head.next = removedElement(head.next, val);
 
-    if(head.val===val){
+    if (head.val === val) {
         return head.next
 
-    }else{
+    } else {
         return head;
     }
 }
+//another way using a dummy ListNode
+let removeElement = (head, val) => {
+    let dummy = new ListNode(-1)//create a dummy node with val -1
+     dummy.next=head //connect dummy to start of the list 
+
+    let curr = dummy;//a pointer is traverse the full list 
+    while (curr.next != null) {  //if pointer have no value the return null either enter the loop
+        if (curr.next.val === val) { // if cur val is equal to val the run if either else
+            curr.next = curr.next.next; // skip the node with matching value
+        } else {
+            curr = curr.next// move to next node
+        }
+    }
+    return dummy.next // return the new head
+}
+
