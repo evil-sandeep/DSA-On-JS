@@ -262,7 +262,7 @@ let removeElement = (head, val) => {
 
 //reverse the linkedlist
 
-var reverseList = function(head) {
+var reverseLists = function(head) {
      if(head===null) return null;
      if(head.next===null)return head
 
