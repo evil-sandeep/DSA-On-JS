@@ -205,74 +205,87 @@ let singleNO = (nums) => {
 //recursion.
 //21 merged two sorted lists (recursion)
 
-class ListNode {
-    constructor(val, next = null) {
-        this.val = val;
-        this.next = next;
-    }
-}
+// class ListNode {
+//     constructor(val, next = null) {
+//         this.val = val;
+//         this.next = next;
+//     }
+// }
 
 
-let mergedTwoLists = (list1, list2) => {
-    if (list1 === null) return list2;
-    if (list2 === null) return list1;
+// let mergedTwoLists = (list1, list2) => {
+//     if (list1 === null) return list2;
+//     if (list2 === null) return list1;
 
-    if (list1.val < list2.val) {
-        list1.next = mergedTwoLists(list1.next, list2);
-        return list1;
-    } else {
-        list2.next = mergedTwoLists(list1, list2.next);
-        return list2;
-    }
-};
+//     if (list1.val < list2.val) {
+//         list1.next = mergedTwoLists(list1.next, list2);
+//         return list1;
+//     } else {
+//         list2.next = mergedTwoLists(list1, list2.next);
+//         return list2;
+//     }
+// };
 
-list1 = [1, 2, 4]
-list2 = [1, 3, 4, 6]
-console.log(mergedTwoLists(list1, list2));
+// list1 = [1, 2, 4]
+// list2 = [1, 3, 4, 6]
+// console.log(mergedTwoLists(list1, list2));
 
 
 //removed list from element
-let removedElement = (head, val) => {
-    if (head === null) return null;
+// let removedElement = (head, val) => {
+//     if (head === null) return null;
 
-    head.next = removedElement(head.next, val);
+//     head.next = removedElement(head.next, val);
 
-    if (head.val === val) {
-        return head.next
+//     if (head.val === val) {
+//         return head.next
 
-    } else {
-        return head;
-    }
-}
+//     } else {
+//         return head;
+//     }
+// }
 //another way using a dummy ListNode
-let removeElement = (head, val) => {
-    let dummy = new ListNode(-1)//create a dummy node with val -1
-     dummy.next=head //connect dummy to start of the list 
+// let removeElement = (head, val) => {
+//     let dummy = new ListNode(-1)//create a dummy node with val -1
+//      dummy.next=head //connect dummy to start of the list 
 
-    let curr = dummy;//a pointer is traverse the full list 
-    while (curr.next != null) {  //if pointer have no value the return null either enter the loop
-        if (curr.next.val === val) { // if cur val is equal to val the run if either else
-            curr.next = curr.next.next; // skip the node with matching value
-        } else {
-            curr = curr.next// move to next node
-        }
-    }
-    return dummy.next // return the new head
-}
+//     let curr = dummy;//a pointer is traverse the full list 
+//     while (curr.next != null) {  //if pointer have no value the return null either enter the loop
+//         if (curr.next.val === val) { // if cur val is equal to val the run if either else
+//             curr.next = curr.next.next; // skip the node with matching value
+//         } else {
+//             curr = curr.next// move to next node
+//         }
+//     }
+//     return dummy.next // return the new head
+// }
 
 //reverse the linkedlist
 
-var reverseLists = function(head) {
-     if(head===null) return null;
-     if(head.next===null)return head
+// var reverseLists = function(head) {
+//      if(head===null) return null;
+//      if(head.next===null)return head
 
-     let prev=null;
-     let curr=head;
-     while(curr !== null){
-        let next=curr.next;
-        curr.next=prev
-        prev=curr;
-        curr=next
-     }
-     head=prev
-};
+//      let prev=null;
+//      let curr=head;
+//      while(curr !== null){
+//         let next=curr.next;
+//         curr.next=prev
+//         prev=curr;
+//         curr=next
+//      }
+//      head=prev
+// };
+
+
+//power of two 
+
+let powerOfTwo = (n) => {
+    if (n <= 0) return false
+    while (n % 2 === 0) {
+        n = n / 2
+    }
+    return n === 1
+}
+
+console.log(powerOfTwo(16))
