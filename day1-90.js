@@ -290,15 +290,35 @@ let powerOfTwo = (n) => {
 
 // console.log(powerOfTwo(16))
 
-let removeDuplicate=(nums)=>{
-let uniq=nums.sort((a,b)=>a-b);
-let result=[]
+let removeDuplicate = (nums) => {
+    let uniq = nums.sort((a, b) => a - b);
+    let result = []
 
-for(let i=0;i<uniq.length; i++){
-    if(uniq[i]!==uniq[i+1]){
-        result.push(uniq[i])
+    for (let i = 0; i < uniq.length; i++) {
+        if (uniq[i] !== uniq[i + 1]) {
+            result.push(uniq[i])
+        }
     }
+    return result
 }
-return result
+// console.log(removeDuplicate([1, 2, 4, 3, 3, 4, 2, 42, 42, 2, 2, 4, 24, 2, 414, 2]))
+
+//binary search
+
+let search = (nums, target) => {//n=1,2,5,6,7,8,9,10,11,12,13  t=5
+    let left = 0; //0
+    let right = nums.length - 1;//10,4
+    while (left <= right) {//0<=10 go,0<=4 go   //1,2,5,6,7
+        let mid = Math.floor((left + right) / 2); //mid=5,mid=2
+        if (nums[mid] === target) return mid //8!=5 go, yes 5
+        else if (nums[mid] <target ) {   //8<5 go 
+            left = mid + 1
+        } else {
+            right = mid - 1 //right =4
+        }
+        
+    }
+return -1
 }
-console.log(removeDuplicate([1,2,4,3,3,4,2,42,42,2,2,4,24,2,414,2]))
+let arrary = [1,2,5,6,7,8,9,10,11,12,13], target = 5
+console.log(search(arrary, target))
