@@ -288,4 +288,17 @@ let powerOfTwo = (n) => {
     return n === 1
 }
 
-console.log(powerOfTwo(16))
+// console.log(powerOfTwo(16))
+
+let removeDuplicate=(nums)=>{
+let uniq=nums.sort((a,b)=>a-b);
+let result=[]
+
+for(let i=0;i<uniq.length; i++){
+    if(uniq[i]!==uniq[i+1]){
+        result.push(uniq[i])
+    }
+}
+return result
+}
+console.log(removeDuplicate([1,2,4,3,3,4,2,42,42,2,2,4,24,2,414,2]))
