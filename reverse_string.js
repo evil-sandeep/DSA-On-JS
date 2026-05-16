@@ -4,11 +4,18 @@ const reverseString=(str)=>{
     let left=0;
     let right=str.length-1;
     let temp;
-    for(;left<right;right--){
+    // for(;left<right;right--){
+    //     temp=str[right]
+    //     str[right]=str[left]
+    //     str[left]=temp
+    //     left++
+    // }
+    while(left<right){
         temp=str[right]
         str[right]=str[left]
         str[left]=temp
         left++
+        right--
     }
 return str.join('')
 }
