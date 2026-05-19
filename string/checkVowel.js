@@ -112,3 +112,11 @@ const checkVowel = (str) => {
 }
 
 console.log(checkVowel('helloo'))
+
+// Is problem me hume string ke andar kitne vowels present hain woh count karna hai. Sabse pehle hum ek variable vowel banate hain jisme saare vowels store kar dete hain, jaise aeiouAEIOU. Isme lowercase aur uppercase dono vowels rakhe gaye hain taki agar string me capital letters aaye tab bhi program unhe identify kar sake.
+
+// Uske baad hum ek count variable lete hain aur usko 0 se initialize karte hain. Ye variable total vowels ki counting store karega. Initially count 0 hota hai kyuki abhi tak humne koi character check nahi kiya hota.
+
+// Phir hum for...of loop use karte hain. Ye loop string ke har character ko one-by-one access karta hai. Har iteration me current character char variable me store hota hai. Ab hum check karte hain ki current character vowels string ke andar present hai ya nahi. Iske liye includes() method use karte hain. Agar current character vowel hota hai, toh condition true ho jati hai aur hum count++ karke vowel count ko increase kar dete hain.
+
+// Jab loop pura complete ho jata hai, tab count variable me total vowels ki value store hoti hai. Fir hum us value ko return kar dete hain. Example ke liye "helloo" me e, o, aur o vowels hain, isliye output 3 aata hai.

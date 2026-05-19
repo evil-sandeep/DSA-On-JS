@@ -29,3 +29,7 @@ let str = 'hel';
 // Function call kiya
 // Output console me print hoga
 console.log(reverseString(str));
+
+//Is problem me hume ek string ko ulta (reverse) karna hota hai. Example agar string "hel" hai, toh output "leh" aana chahiye. Iske liye hum ek empty string banate hain jiska naam reverse rakhte hain. Ye empty string reverse characters ko store karegi.
+
+// Uske baad hum loop ko string ke last index se start karte hain. Kyuki reverse karne ke liye hume characters ko end se beginning tak lena hota hai. str.length - 1 string ka last index deta hai. Har iteration me hum current character ko reverse string me add karte jaate hain.
