@@ -15,6 +15,7 @@ const duplicateChar = (str) => {
             // matlab duplicate mila
             if (str[i] === str[j]) {
 
+                
                 // Duplicate character print karo
                 console.log(str[i]);
 
