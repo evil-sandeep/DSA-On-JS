@@ -27,22 +27,22 @@ console.log(mergeTwoArra(arr1,arr2))
 
 
 //concat() Method
-const mergeArray = (arr1, arr2) => {
+// const mergeArray = (arr1, arr2) => {
 
-    return arr1.concat(arr2);
-}
+//     return arr1.concat(arr2);
+// }
 
-let arr1 = [1,2,3];
-let arr2 = [4,5,6];
+// let arr1 = [1,2,3];
+// let arr2 = [4,5,6];
 
-console.log(mergeArray(arr1, arr2));
+// console.log(mergeArray(arr1, arr2));
 
 
-//Spread Operator Method
-const mergeArray = (arr1, arr2) => {
+// //Spread Operator Method
+// const mergeArray = (arr1, arr2) => {
 
-    return [...arr1, ...arr2];
-}
+//     return [...arr1, ...arr2];
+// }
 
 
 
