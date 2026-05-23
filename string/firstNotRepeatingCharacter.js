@@ -52,5 +52,5 @@ console.log(notRepeatingChar(str))
    
 //     if(result.length === 2){
 //         return result
-//     }
+//     } 
 // }
