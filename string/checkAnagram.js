@@ -21,11 +21,16 @@ console.log(anagram(nums1,nums2))
 
 // Anagram Check — Theory Logic 🧠
 
-// Is problem me hume check karna hota hai ki kya dono strings anagram hain ya nahi. Anagram ka matlab hota hai ki dono strings me same characters same quantity me present hone chahiye, bas unka order different ho sakta hai.
+// Is problem me hume check karna hota hai ki kya dono strings anagram hain ya nahi. Anagram ka matlab hota hai ki dono strings me same 
+// characters same quantity me present hone chahiye, bas unka order different ho sakta hai.
 
-// Sabse pehle hum dono strings ka length check karte hain. Agar dono ka length different hota hai, toh wo kabhi bhi anagram nahi ho sakte. Kyuki characters ki total quantity hi different hai. Isliye hum directly false ya "not anagram" return kar dete hain.
+// Sabse pehle hum dono strings ka length check karte hain. Agar dono ka length different hota hai, toh wo kabhi bhi anagram nahi ho sakte.
+//  Kyuki characters ki total quantity hi different hai. Isliye hum directly false ya "not anagram" return kar dete hain.
 
-// Agar dono strings ka length same hota hai, tab hum dono strings ko alphabetical order me arrange karte hain. Lekin sort() method directly string par work nahi karta, isliye pehle hum string ko split('') method se array me convert karte hain. Fir sort() method use karke characters ko alphabetical order me arrange karte hain. Uske baad join('') use karke array ko wapas string me convert kar dete hain.
+// Agar dono strings ka length same hota hai, tab hum dono strings ko alphabetical order me arrange karte hain. Lekin sort() method 
+// directly string par work nahi karta, isliye pehle hum string ko split('') method se array me convert karte hain. Fir sort() method use 
+// karke characters ko alphabetical order me arrange karte hain. Uske baad join('') use karke array ko wapas string me convert kar dete 
+// hain.
 
 // Example:
 
