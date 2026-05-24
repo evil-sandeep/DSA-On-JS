@@ -1,19 +1,19 @@
-const moveZero=(nums)=>{
-     let intialValue=0;
+const moveZero = (nums) => {
+     let intialValue = 0;
 
-     for(let i=0; i<nums.length; i++){
-        if(nums[i]!==0){//0=0,1!=0,0=0,2!=0
-            nums[intialValue]=nums[i]// ,[1], ,[1,2]
-            intialValue++// ,1,2
-        }
+     for (let i = 0; i < nums.length; i++) {
+          if (nums[i] !== 0) {//0=0,1!=0,0=0,2!=0
+               nums[intialValue] = nums[i]// ,[1], ,[1,2]
+               intialValue++// ,1,2
+          }
      }
-     while(intialValue<nums.length){//2<4
-nums[intialValue++]=0 //[0,0]
+     while (intialValue < nums.length) {//2<4
+          nums[intialValue++] = 0 //[0,0]
      }
      return nums
 }
 
-console.log(moveZero([0,1,0,2]))
+console.log(moveZero([0, 1, 0, 2]))
 
 
 //Move zeros to end problem me hum directly zeros ko move karne ki koshish nahi karte, kyuki usme swapping aur shifting ka logic thoda confusing ho jata hai. Isliye hum ek simple approach use karte hain: hum sirf non-zero values ko correct position par place karte hain. Sabse pehle hum ek variable lete hain insertPosition, jo batata hai ki next non-zero value array me kaha insert hogi. Initially iska value 0 hota hai, kyuki pehla non-zero element array ke first position par aayega.
