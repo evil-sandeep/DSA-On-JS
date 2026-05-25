@@ -120,11 +120,15 @@ console.log(anagramm(str1, str2));
 
 // Anagram Check Using HashMap — Theory Logic 🧠
 
-// Is approach me hum strings ko sort nahi karte. Hum ek object/hashmap use karte hain jisme characters ka count store hota hai. Is method ka main idea ye hai ki agar dono strings anagram hain, toh dono me har character same number of times present hoga.
+// Is approach me hum strings ko sort nahi karte. Hum ek object/hashmap use karte hain jisme characters ka count store hota hai. Is method
+//  ka main idea ye hai ki agar dono strings anagram hain, toh dono me har character same number of times present hoga.
 
-// Sabse pehle hum dono strings ka length check karte hain. Agar lengths different hote hain, toh strings kabhi bhi anagram nahi ho sakti, kyuki total characters ki quantity hi different hai. Isliye directly false return kar dete hain.
+// Sabse pehle hum dono strings ka length check karte hain. Agar lengths different hote hain, toh strings kabhi bhi anagram nahi ho sakti,
+//  kyuki total characters ki quantity hi different hai. Isliye directly false return kar dete hain.
 
-// Uske baad hum ek empty object banate hain jiska naam count rakhte hain. Ab hum first string ko traverse karte hain aur har character ka count object me store karte hain. Agar character pehle se object me present hota hai, toh uska count increase kar dete hain. Agar pehli baar milta hai, toh uska count 1 set kar dete hain.
+// Uske baad hum ek empty object banate hain jiska naam count rakhte hain. Ab hum first string ko traverse karte hain aur har character ka
+//  count object me store karte hain. Agar character pehle se object me present hota hai, toh uska count increase kar dete hain. Agar 
+// pehli baar milta hai, toh uska count 1 set kar dete hain.
 
 // Example:
 
@@ -141,11 +145,15 @@ console.log(anagramm(str1, str2));
 //  n:1
 // }
 
-// Ab hum second string ko traverse karte hain. Har character ke liye check karte hain ki kya wo object me present hai aur uska count available hai ya nahi. Agar character object me nahi milta ya uska count already 0 hota hai, iska matlab strings anagram nahi hain aur hum direct false return kar dete hain.
+// Ab hum second string ko traverse karte hain. Har character ke liye check karte hain ki kya wo object me present hai aur uska count 
+// available hai ya nahi. Agar character object me nahi milta ya uska count already 0 hota hai, iska matlab strings anagram nahi hain 
+// aur hum direct false return kar dete hain.
 
-// Agar character mil jata hai, toh uska count decrease kar dete hain. Iska matlab second string ka character successfully first string ke character se match ho gaya.
+// Agar character mil jata hai, toh uska count decrease kar dete hain. Iska matlab second string ka character successfully first string
+//  ke character se match ho gaya.
 
-// Agar pura loop complete ho jata hai aur koi mismatch nahi milta, toh iska matlab dono strings me same characters same quantity me present hain. Isliye strings anagram hain aur hum true return kar dete hain.
+// Agar pura loop complete ho jata hai aur koi mismatch nahi milta, toh iska matlab dono strings me same characters same quantity me 
+// present hain. Isliye strings anagram hain aur hum true return kar dete hain.
 
 // Main Logic Simple Words Me 🚀
 // Dono strings ka length check karo
