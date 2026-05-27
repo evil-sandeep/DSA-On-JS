@@ -13,7 +13,7 @@ const longestwordinsentence=(str)=>{
 
 }
 let str='sandeep kumar sahoo'
-console.log(longestwordinsentence(str))
+console.log( (str))
 
 // Is approach me sabse pehle hum sentence ko spaces ke basis par split karte hain taki har word alag ho jaye. split(" ") method sentence ko words ke array me convert kar deta hai. Iske baad hum ek variable longest banate hain jo currently sabse bade word ko store karega. Initially ye empty string hota hai.
 
