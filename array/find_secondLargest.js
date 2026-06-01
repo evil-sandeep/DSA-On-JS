@@ -120,3 +120,23 @@ console.log(findSecLarg([10, 9, 2]))
 // current > largest   largest update + old largest becomes secondLargest
 // current > secondLargest secondLargest update
 // current === largest duplicate ignore
+
+
+
+const sLargst=(numss)=>{
+    let lar=-Infinity
+    let slar=-Infinity
+    for(let i=0; i<numss.length; i++){
+        let cur=numss[i]
+        if(cur>lar){
+            slar=lar;
+            lar=cur
+        }else if(cur>slar && cur !==lar){
+slar=current
+        }
+    }
+    return slar
+
+}
+
+console.log(sLargst([2,3,1]))

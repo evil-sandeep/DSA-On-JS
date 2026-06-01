@@ -14,11 +14,21 @@ let arr2=[4,5,6]
 
 console.log(mergeTwoArra(arr1,arr2))
 
-//Is problem me hume 2 arrays ko combine karke ek single array banana hota hai. Iske liye hum ek new empty array banate hain jisme final merged elements store honge.
+//Is problem me hume 2 arrays ko combine karke ek single array banana hota hai. Iske liye hum ek new empty array banate hain jisme final
+//  merged elements store honge.
+//  let newArray=[]
 
-// Sabse pehle hum first array par loop chalate hain aur uske har element ko push() method ki help se new array me add kar dete hain. Isse first array ke saare elements new array me aa jaate hain.
+// Sabse pehle hum first array par loop chalate hain aur uske har element ko push() method ki help se new array me add kar dete hain. 
+// Isse first array ke saare elements new array me aa jaate hain.
+// for(let i=0; i<arr1.length; i++){
+//         newArray .push(arr1[i])
+//     }
 
-// Uske baad hum second array par loop chalate hain aur uske har element ko bhi same new array me push kar dete hain. Ab new array me dono arrays ke saare elements present hote hain.
+// Uske baad hum second array par loop chalate hain aur uske har element ko bhi same new array me push kar dete hain. Ab new array me 
+// dono arrays ke saare elements present hote hain.
+//  for(let j=0; j<arr2.length; j++){
+//         newArray .push(arr2[j])
+//     }
 
 // Finally hum merged array ko return kar dete hain.
 
@@ -87,12 +97,14 @@ console.log(mergeTwoArra(arr1,arr2))
 
 // console.log(mergeTwoArray(arr1, arr2));
 
-// Is approach me hum .push() method use nahi karte. Hum manually array ke indexes manage karte hain. Sabse pehle ek empty array banate hain aur ek index variable lete hain jo batata hai ki next value kaha insert hogi.
+// Is approach me hum .push() method use nahi karte. Hum manually array ke indexes manage karte hain. Sabse pehle ek empty array banate
+//  hain aur ek index variable lete hain jo batata hai ki next value kaha insert hogi.
 
 // Phir first array par loop chala kar har element ko:
 
 // newArray[index]
 
-// par store kar dete hain aur index ko increase kar dete hain. Jab first array complete ho jata hai, tab second array ke elements bhi same tarike se next positions par insert kar dete hain.
+// par store kar dete hain aur index ko increase kar dete hain. Jab first array complete ho jata hai, tab second array ke elements bhi 
+// same tarike se next positions par insert kar dete hain.
 
 // Is tarah hum bina .push() use kiye manually merged array bana lete hain.
