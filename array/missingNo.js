@@ -16,12 +16,14 @@
 // lekin unme se ek number missing hota hai. Array sorted bhi ho sakta hai aur unsorted bhi. Agar array unsorted hota hai, 
 // toh sabse pehle usko ascending order me sort karte hain taki numbers proper sequence me aa jaayein.
 // Sort karne ke baad: Ab hum array ko loop se traverse karte hain aur har current element ka expected next value nikalte hain.
-//  Expected next value ka matlab hota hai: Uske baad hum us expected value ko actual next element se compare karte hain. Lekin actual next element: 13
+//  Expected next value ka matlab hota hai: Uske baad hum us expected value ko actual next element se compare karte hain. Lekin actual 
+// next element: 13
 
 // hai. Iska matlab:
 // 👉 12 missing hai.
 
-// Agar current number + 1 aur next element same hote hain, iska matlab sequence correct chal raha hai aur koi number missing nahi hai. Jis point par mismatch milta hai,
+// Agar current number + 1 aur next element same hote hain, iska matlab sequence correct chal raha hai aur koi number missing nahi hai.
+//  Jis point par mismatch milta hai,
 //  wahi missing number hota hai aur usko return kar dete hain.
 
 //  Agar array unsorted hai toh pehle sort karo
@@ -54,7 +56,8 @@ console.log(missingNo(nums))
 
 // Ye formula hume batata hai ki agar sequence complete hota, toh total sum kitna hona chahiye tha.
 
-// Uske baad hum reduce() method ki help se array ke actual elements ka sum nikalte hain. Kyuki array me ek number missing hota hai, isliye actual sum expected sum se thoda chhota hota hai.
+// Uske baad hum reduce() method ki help se array ke actual elements ka sum nikalte hain. Kyuki array me ek number missing hota hai, 
+// isliye actual sum expected sum se thoda chhota hota hai.
 
 // Finally hum:
 

@@ -17,9 +17,12 @@ let nums = [1, 3, 4, 2]
 // console.log(find2Sum(nums, target))
 
 
-// Is problem me hume array ke andar aise do numbers find karne hote hain jinka sum target value ke equal ho. Isliye sabse pehle hum outer loop chalate hain taki array ke har element ko ek-ek baar current number ke roop me pick kar saken. Har iteration me current variable array ka current element store karta hai.
+// Is problem me hume array ke andar aise do numbers find karne hote hain jinka sum target value ke equal ho. Isliye sabse pehle hum outer
+//  loop chalate hain taki array ke har element ko ek-ek baar current number ke roop me pick kar saken. Har iteration me current variable
+//  array ka current element store karta hai.
 
-// Uske baad hum needed variable banate hain. needed ka purpose ye hota hai ki target sum complete karne ke liye hume aur kaunsa number chahiye woh calculate karna. Isliye hum:
+// Uske baad hum needed variable banate hain. needed ka purpose ye hota hai ki target sum complete karne ke liye hume aur kaunsa number 
+// chahiye woh calculate karna. Isliye hum:
 
 // needed = target - current
 
@@ -33,13 +36,16 @@ let nums = [1, 3, 4, 2]
 
 // ho sake.
 
-// Uske baad hume check karna hota hai ki ye needed number array me present hai ya nahi. Isi liye second loop (inner loop) use karte hain. Inner loop remaining elements ko traverse karta hai aur har element ko needed value ke saath compare karta hai.
+// Uske baad hume check karna hota hai ki ye needed number array me present hai ya nahi. Isi liye second loop (inner loop) use karte hain.
+//  Inner loop remaining elements ko traverse karta hai aur har element ko needed value ke saath compare karta hai.
 
 // Inner loop ko:
 
 // j = i + 1
 
-// se start karte hain, kyuki hume current element ko dobara compare nahi karna hota. Agar hum j = 0 ya j = 1 se start karein, toh same element khud se compare ho sakta hai, jo wrong result de sakta hai. i + 1 se start karne ka matlab hota hai ki hum sirf current element ke baad wale elements ko check karenge.
+// se start karte hain, kyuki hume current element ko dobara compare nahi karna hota. Agar hum j = 0 ya j = 1 se start karein, toh same
+// element khud se compare ho sakta hai, jo wrong result de sakta hai. i + 1 se start karne ka matlab hota hai ki hum sirf current element
+//  ke baad wale elements ko check karenge.
 
 // Example:
 
@@ -55,7 +61,8 @@ let nums = [1, 3, 4, 2]
 
 // nums[j] === needed
 
-// true ho jata hai, iska matlab current number aur found number ka sum target ke equal hai. Tab hum required pair ya value return kar dete hain.
+// true ho jata hai, iska matlab current number aur found number ka sum target ke equal hai. Tab hum required pair ya value return kar
+//  dete hain.
 
 
 
@@ -81,7 +88,9 @@ let target=5
 console.log(find2Nums(num,target))
 
 
-//Is approach me hum object/hashmap use karte hain taki hume baar-baar pura array search na karna pade. Sabse pehle hum ek empty object banate hain jo already visited numbers ko store karega. Fir hum array ko ek hi loop me traverse karte hain aur har iteration me current number ko pick karte hain.
+//Is approach me hum object/hashmap use karte hain taki hume baar-baar pura array search na karna pade. Sabse pehle hum ek empty object 
+// banate hain jo already visited numbers ko store karega. Fir hum array ko ek hi loop me traverse karte hain aur har iteration me current
+//  number ko pick karte hain.
 
 // Uske baad hum calculate karte hain ki target sum complete karne ke liye hume aur kaunsa number chahiye. Isliye hum:
 
@@ -89,8 +98,11 @@ console.log(find2Nums(num,target))
 
 // nikalte hain. Ye needed value batati hai ki current number ke saath kaunsa second number add hoga toh target banega.
 
-// Fir hum object/hashmap me check karte hain ki needed number pehle se present hai ya nahi. Agar needed value object me mil jaati hai, iska matlab current number aur previously stored number milkar target sum bana rahe hain. Tab hum pair return kar dete hain.
+// Fir hum object/hashmap me check karte hain ki needed number pehle se present hai ya nahi. Agar needed value object me mil jaati hai, 
+// iska matlab current number aur previously stored number milkar target sum bana rahe hain. Tab hum pair return kar dete hain.
 
-// Agar needed number object me present nahi hota, toh hum current number ko object me store kar dete hain taki future iterations me usko check kiya ja sake.
+// Agar needed number object me present nahi hota, toh hum current number ko object me store kar dete hain taki future iterations me usko
+//  check kiya ja sake.
 
-// Is approach ka main advantage ye hai ki hume second loop use nahi karna padta. Object/hashmap fast lookup provide karta hai, isliye hum ek hi traversal me pair find kar lete hain.
+// Is approach ka main advantage ye hai ki hume second loop use nahi karna padta. Object/hashmap fast lookup provide karta hai, isliye 
+//  hum ek hi traversal me pair find kar lete hain.
